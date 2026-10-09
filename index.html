@@ -8,18 +8,18 @@
 <!-- Tipografías de Google Fonts (si no cargan, se usan las de respaldo) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<<link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Isometra&display=swap" rel="stylesheet">>
+<link href="https://fonts.googleapis.com/css2?family=Isometra&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
   /* ====== COLORES: cambia estos valores para cambiar toda la paleta ====== */
   :root {
     --fondo: #EEF1F8;
     --texto: #1B2140;
-    --azul: #3A4BDB;
-    --amarillo: #F2B84B;
-    --rosa: #F28DA6;
+    --verde: #1F6B4A;
+    --violeta: #5B2A86;
+    --azul: #1F3A8A;
     --blanco: #FFFFFF;
-    --display: "Isometra Static", "Playfair Display", Arial, sans-serif;
+    --display: "Isometra ",, Arial, sans-serif;
     --cuerpo: "Playfair Display", Arial, sans-serif;
   }
 
@@ -63,8 +63,8 @@
   }
   .trio span + span { margin-left: -1.4rem; }
   .trio span:nth-child(1) { background: var(--azul); color: var(--blanco); }
-  .trio span:nth-child(2) { background: var(--amarillo); }
-  .trio span:nth-child(3) { background: var(--rosa); }
+  .trio span:nth-child(2) { background: var(--amarillo); color: var(--blanco); }
+  .trio span:nth-child(3) { background: var(--rosa); color: var(--blanco); }
 
   /* ====== SOBRE EL PROYECTO ====== */
   .sobre p { max-width: 62ch; }
@@ -86,11 +86,11 @@
   /* ====== CONTACTO ====== */
   .contacto { background: var(--texto); color: var(--blanco); border-radius: 24px; padding: 3rem 2rem; margin-bottom: 3rem; }
   .contacto p { max-width: 50ch; margin-bottom: 1.5rem; }
-  .boton {
-    display: inline-block; background: var(--amarillo); color: var(--texto);
-    padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; text-decoration: none;
-  }
-  .boton:hover { background: var(--blanco); }
+ .boton {
+  display: inline-block; background: var(--blanco); color: var(--texto);
+  padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; text-decoration: none;
+ }
+ .boton:hover { background: var(--fondo); }
 
   footer { padding: 1.5rem 0 3rem; font-size: .9rem; opacity: .7; }
 
