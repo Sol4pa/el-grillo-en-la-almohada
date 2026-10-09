@@ -78,8 +78,8 @@
   /* ====== LO QUE HACEMOS ====== */
   .entradas { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .entrada { background: var(--blanco); padding: 1.5rem; border-radius: 14px; border-top: 6px solid var(--azul); }
-  .entrada:nth-child(2) { border-top-color: var(--amarillo); }
-  .entrada:nth-child(3) { border-top-color: var(--rosa); }
+  .entrada:nth-child(3n+2) { border-top-color: var(--amarillo); }
+  .entrada:nth-child(3n) { border-top-color: var(--rosa); }
   .entrada h3 { font-size: 1.3rem; margin-bottom: .5rem; }
   .entrada small { display: block; margin-top: 1rem; opacity: .7; }
 
