@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuestro proyecto</title>
+
+<!-- Tipografías de Google Fonts (si no cargan, se usan las de respaldo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ====== COLORES: cambia estos valores para cambiar toda la paleta ====== */
+  :root {
+    --fondo: #EEF1F8;
+    --texto: #1B2140;
+    --azul: #3A4BDB;
+    --amarillo: #F2B84B;
+    --rosa: #F28DA6;
+    --blanco: #FFFFFF;
+    --display: "Bricolage Grotesque", "Trebuchet MS", Arial, sans-serif;
+    --cuerpo: "Work Sans", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: var(--cuerpo);
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+
+  .contenedor { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.1; }
+  h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1.25rem; }
+  section { padding: 4rem 0; }
+
+  /* ====== MENÚ ====== */
+  header { padding: 1.25rem 0; }
+  nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .logo { font-family: var(--display); font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+  nav ul { display: flex; gap: 1.5rem; list-style: none; }
+  nav ul a { text-decoration: none; font-weight: 500; }
+  nav ul a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  /* ====== PORTADA ====== */
+  .portada { padding: 3rem 0 4.5rem; }
+  .portada h1 { font-size: clamp(2.8rem, 9vw, 6rem); font-weight: 800; max-width: 12ch; }
+  .portada p { max-width: 48ch; margin-top: 1.5rem; font-size: 1.2rem; }
+
+  /* Tres círculos que se superponen: uno por persona */
+  .trio { display: flex; margin-top: 2.5rem; }
+  .trio span {
+    width: 5.5rem; height: 5.5rem; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--display); font-weight: 800; font-size: 1.8rem;
+    border: 4px solid var(--fondo);
+  }
+  .trio span + span { margin-left: -1.4rem; }
+  .trio span:nth-child(1) { background: var(--azul); color: var(--blanco); }
+  .trio span:nth-child(2) { background: var(--amarillo); }
+  .trio span:nth-child(3) { background: var(--rosa); }
+
+  /* ====== SOBRE EL PROYECTO ====== */
+  .sobre p { max-width: 62ch; }
+  .sobre p + p { margin-top: 1rem; }
+
+  /* ====== LO QUE HACEMOS ====== */
+  .entradas { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .entrada { background: var(--blanco); padding: 1.5rem; border-radius: 14px; border-top: 6px solid var(--azul); }
+  .entrada:nth-child(2) { border-top-color: var(--amarillo); }
+  .entrada:nth-child(3) { border-top-color: var(--rosa); }
+  .entrada h3 { font-size: 1.3rem; margin-bottom: .5rem; }
+  .entrada small { display: block; margin-top: 1rem; opacity: .7; }
+
+  /* ====== EQUIPO ====== */
+  .equipo { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .persona h3 { font-size: 1.4rem; }
+  .persona .rol { font-weight: 500; color: var(--azul); margin-bottom: .5rem; }
+
+  /* ====== CONTACTO ====== */
+  .contacto { background: var(--texto); color: var(--blanco); border-radius: 24px; padding: 3rem 2rem; margin-bottom: 3rem; }
+  .contacto p { max-width: 50ch; margin-bottom: 1.5rem; }
+  .boton {
+    display: inline-block; background: var(--amarillo); color: var(--texto);
+    padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; text-decoration: none;
+  }
+  .boton:hover { background: var(--blanco); }
+
+  footer { padding: 1.5rem 0 3rem; font-size: .9rem; opacity: .7; }
+
+  @media (max-width: 560px) {
+    .trio span { width: 4.2rem; height: 4.2rem; font-size: 1.4rem; }
+    .contacto { padding: 2rem 1.25rem; }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="contenedor">
+    <nav>
+      <!-- EDITA:  -->
+      <a class="El Grillo En La Almoahada" href="#inicio">Nuestro proyecto</a>
+      <ul>
+        <li><a href="#sobre">Sobre nosotros</a></li>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- PORTADA -->
+  <section class="portada" id="inicio">
+    <div class="contenedor">
+      <!-- EDITA:  -->
+      <h1>Los Grillosos Todo el MUNDO contento esta</h1>
+      <p>Aquí vamos juntando lo que creamos, aprendemos y probamos. Una página hecha entre los tres.</p>
+      <!-- EDITA: F.T.L -->
+      <div class="F.T.L" aria-hidden="true">
+        <span>A</span><span>B</span><span>C</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE EL PROYECTO -->
+  <section class="sobre" id="sobre">
+    <div class="contenedor">
+      <h2>Sobre el proyecto</h2>
+      <!-- EDITA:  -->
+      <p>esta pagina trata de 3 locos cuyas vidas se unieron por obra del destino.</p>
+      <p>Hacemos lo que pinte y esperamos lograr mucho con eso .</p>
+    </div>
+  </section>
+
+  <!-- NOVEDADES -->
+  <section id="novedades">
+    <div class="contenedor">
+      <h2>Novedades</h2>
+      <div class="entradas">
+
+        <!-- Para agregar una entrada, copia un bloque <article> completo y pégalo debajo -->
+        <article class="entrada">
+          <h3>Primera entrada</h3>
+          <p>Escribe aquí una novedad, un avance o una idea del proyecto.</p>
+          <small>9 de octubre de 2026</small>
+        </article>
+
+        <article class="entrada">
+          <h3>Segunda entrada</h3>
+          <p>Otra novedad. Puede ser algo terminado o algo que están planeando.</p>
+          <small>Próximamente</small>
+        </article>
+
+        <article class="entrada">
+          <h3>Tercera entrada</h3>
+          <p>Sigan agregando entradas a medida que avance el proyecto.</p>
+          <small>Próximamente</small>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo">
+    <div class="contenedor">
+      <h2>El equipo</h2>
+      <div class="equipo">
+
+        <!-- EDITA: nombre, rol y una frase de cada persona -->
+        <div class="persona">
+          <h3>Taiel</h3>
+          <p class="rol">Se rasca la pija</p>
+          <p>Le encanta hacerse la pajita</p>
+        </div>
+
+        <div class="persona">
+          <h3>Nano (Leandro) 1</h3>
+          <p class="rol">Crear un maquina que destruya el mundo </p>
+          <p>Le gustan los jueguitos y tomar mate.</p>
+        </div>
+
+        <div class="persona">
+          <h3>Franco 2</h3>
+          <p class="rol">Poeta empedernido</p>
+          <p>Sueña con la revolucion</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="contenedor">
+      <div class="contacto">
+        <h2>Escríbenos</h2>
+        <p>¿Tienes una pregunta o una idea para el proyecto? Cuéntanos.</p>
+        <!-- EDITA: cambia el correo por el tuyo -->
+        <a class="boton" href="ivantaiellarsenherrera@gmail.com">Enviar un correo</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contenedor">
+    <!-- EDITA: 2026 -->
+    <p>&copy; 2026 El grillo en la almohada "solo en tu imaginacion."</p>
+  </div>
+</footer>
+
+</body>
+</html>
